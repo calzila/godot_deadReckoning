@@ -514,6 +514,7 @@ public:
 	virtual void multimesh_set_physics_interpolated(RID p_multimesh, bool p_interpolated) = 0;
 	virtual void multimesh_set_physics_interpolation_quality(RID p_multimesh, MultimeshPhysicsInterpolationQuality p_quality) = 0;
 	virtual void multimesh_instance_reset_physics_interpolation(RID p_multimesh, int p_index) = 0;
+	virtual void multimesh_instances_reset_physics_interpolation(RID p_multimesh) = 0;
 
 	virtual void multimesh_set_visible_instances(RID p_multimesh, int p_visible) = 0;
 	virtual int multimesh_get_visible_instances(RID p_multimesh) const = 0;
@@ -1283,6 +1284,7 @@ public:
 	};
 
 	virtual void environment_set_tonemap(RID p_env, EnvironmentToneMapper p_tone_mapper, float p_exposure, float p_white) = 0;
+	virtual void environment_set_tonemap_agx_contrast(RID p_env, float p_agx_contrast) = 0;
 	virtual void environment_set_adjustment(RID p_env, bool p_enable, float p_brightness, float p_contrast, float p_saturation, bool p_use_1d_color_correction, RID p_color_correction) = 0;
 
 	virtual void environment_set_ssr(RID p_env, bool p_enable, int p_max_steps, float p_fade_in, float p_fade_out, float p_depth_tolerance) = 0;
